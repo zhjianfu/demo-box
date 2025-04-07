@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #fefefe;
+}
+
+section {
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5em 0;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+  column-gap: 2.5em;
+  row-gap: 2.5em;
+}
+
+.card {
+  position: relative;
+  background: #fff;
+  width: 350px;
+  height: fit-content;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.card-img img {
+  width: 100%;
+}
+
+.card-info {
+  position: relative;
+  padding: 20px;
+  text-align: center;
+}
+
+.card-info .title {
+  color: #222;
+  font-size: 1.75em;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.card-info .description {
+  color: #222;
+  font-size: 1em;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.sortable-drag {
+  opacity: 1;
+}
+
+.sortable-chosen {
+  opacity: 1;
+}
+.sortable-ghost {
+  opacity: 0;
+}
+
+@media screen and (max-width: 1250px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 835px) {
+  .card-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (max-width: 450px) {
+  section {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .card {
+    width: 100%;
+  }
+}
